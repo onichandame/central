@@ -1,0 +1,3 @@
+[submodule "jobqueue"]
+	path = jobqueue
+	url = git@github.com:onichandame/jobqueue.git
