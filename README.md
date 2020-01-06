@@ -1,6 +1,6 @@
 # central
 
-the central identity service
+the central identity API service.
 
 # Author
 
@@ -8,11 +8,13 @@ Xiao Zhang
 
 # Motivation
 
-multiple apps needs to communicate with each other or share the same block of data.
+multiple apps needs to communicate with each other securely. Therefore 2 requirements are designed to meet.
+1. identity: register new projects, authenticates users for certain projects
+2. catalog: lists available APIs for users
 
-# Function
+# Architecture
 
-This service keeps track of identities of all apps and database.
+The 
 
 ## App
 
