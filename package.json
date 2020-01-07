@@ -10,10 +10,12 @@
     "nodemon": "^2.0.2",
     "okitchen": "0.0.4",
     "path": "^0.12.7",
-    "randomstring": "^1.1.5"
+    "randomstring": "^1.1.5",
+    "worker-farm": "^1.7.0"
   },
   "scripts": {
-    "start": "nodemon server.js --ignore asset --ignore data --ignore node_modules --ignore out"
+    "start": "build && nodemon server.js --ignore asset --ignore data --ignore node_modules --ignore out",
+    "build": "node build.js"
   },
   "author": "onichandame",
   "browserslist": {
