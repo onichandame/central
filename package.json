@@ -14,7 +14,7 @@
     "worker-farm": "^1.7.0"
   },
   "scripts": {
-    "start": "build && nodemon server.js --ignore asset --ignore data --ignore node_modules --ignore out",
+    "start": "build && nodemon server.js --ignore asset --ignore data --ignore node_modules --ignore doc",
     "build": "node build.js"
   },
   "author": "onichandame",

@@ -7,7 +7,7 @@ const okitchen=require('okitchen')
  * @returns {Promise} resolves with nothing on success. rejects with error on failure
  */
 module.exports=function(){
-  return okitchen.init({datadir:path.resolve(__dirname,'data')})
+  return okitchen.init({datadir:path.resolve(__dirname,'asset')})
   .then(()=>{return require(path.resolve(__dirname,'route','auth','init.js'))()})
   .then(()=>{return require(path.resolve(__dirname,'route','app','init.js'))()})
 }
