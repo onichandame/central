@@ -14,14 +14,16 @@ multiple apps in the cluster are availabel to the clients in the outer world. Th
 
 This server runs as a service on the cluster. Data is stored in the central database, therefore a high availability solution is possible.
 
-## App
+The interfaces are open for 2 types of users:
+1. Service: an API server providing a service
+2. Client: the client which is allowed to access certain services
 
-Any service that needs to communicate with sibling service, or needs to share the same database.
+Sometimes a client is itself a service, in this case the service and client permissions are managed separately.
 
-## Database
+## Service
 
-Any privileged app can create and databases.
+A service must have an opening API available to the outer world. It must be registered with the central service with an admin whose has the role of 'appadmin'.
 
-Any database has only maintainer(app).
+## Client
 
-All apps authorized by the maintainer have read/write access to the database.
+A client is an enduser requiring to access a service.
