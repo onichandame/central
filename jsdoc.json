@@ -10,6 +10,7 @@
               "assets",
               "jobqueue",
               "public",
+              "pub_old",
               "views"
             ],
             "includePattern": ".+\\.js(doc|x)?$",

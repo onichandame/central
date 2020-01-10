@@ -18,9 +18,9 @@ app.use(cookieparser())
 require(path.resolve(__dirname,'init.js'))()
 .then(()=>{
 
-  app.get('/newuser',require(path.resolve(__dirname,'route','newuser.js')))
+  app.post('/newuser',require(path.resolve(__dirname,'route','newuser.js')))
   
-  app.use('/newapp',require(path.resolve(__dirname,'newapp.js')))
+  app.post('/newapp',require(path.resolve(__dirname,'newapp.js')))
 
   let server=app.listen(port, ()=>{
     console.log(`Listening on port ${port}!`)

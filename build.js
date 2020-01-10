@@ -1,9 +1,17 @@
-let path = require('path')
-let cp= require('child_process')
-let os = require('os')
+const spawn = require('child-process-promise').spawn;
+const path=require('path')
+const fs=require('fs-extra')
 
-let executable = os.platform().startsWith('win') ? 'npm.cmd' : 'npm'
+// Build frontend
+spawn('npm',['run','build'],{cwd:path.resolve(__dirname,'frontend')})
+  .then(()=>{console.log('frontend built')})
+  .catch(e=>{terminate(e)})
+  .then(()=>{return fs.copy(path.resolve(__dirname,'frontend','build'),path.resolve(__dirname,'public'))})
+  .then(()=>{console.log('fontend installed')})
+  .catch(e=>{terminate(e)})
 
-// build frontend
-let front_path=path.resolve(__dirname,'frontend')
-cp.spawn(executable, ['run', 'build'],{env:process.env, cwd:front_path, stdio:'inherit'})
+function terminate(msg)
+{
+  console.log(typeof msg === 'string' ? msg : JSON.stringify(msg))
+  process.exit(1)
+}
