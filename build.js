@@ -9,6 +9,7 @@ spawn('npm',['run','build'],{cwd:path.resolve(__dirname,'frontend')})
   .then(()=>{return fs.copy(path.resolve(__dirname,'frontend','build'),path.resolve(__dirname,'public'))})
   .then(()=>{console.log('fontend installed')})
   .catch(e=>{terminate(e)})
+  .then(()=>{return fs.copy(path.resolve(__dirname,'static'),path.resolve(__dirname,'public'))})
 
 function terminate(msg)
 {

@@ -143,6 +143,4 @@ const tbls=[
 module.exports=function(){
   console.log(path.resolve(__dirname,'asset'))
   return okitchen.init({datadir:path.resolve(__dirname,'asset')})
-  .then(()=>{return require(path.resolve(__dirname,'route','auth','init.js'))()})
-  .then(()=>{return require(path.resolve(__dirname,'route','app','init.js'))()})
 }

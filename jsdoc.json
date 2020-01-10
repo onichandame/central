@@ -7,7 +7,7 @@
               "frontend",
               "docs",
               "routes",
-              "assets",
+              "asset",
               "jobqueue",
               "public",
               "pub_old",
