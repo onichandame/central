@@ -5,7 +5,7 @@ const cookieparser=require('cookie-parser')
 const okitchen=require('okitchen')
 
 const app = express()
-const port = 8080
+const port = 3001
 
 app.set('views','views')
 app.set('view engine','pug')
@@ -18,19 +18,13 @@ app.use(cookieparser())
 require(path.resolve(__dirname,'init.js'))()
 .then(()=>{
 
-  app.use('/auth',require(path.resolve(__dirname,'route','auth','main.js')))
+  app.get('/newuser',require(path.resolve(__dirname,'route','newuser.js')))
   
-  app.use('/oauth',require(path.resolve(__dirname,'route','oauth','main.js')))
-  
-  app.use('/app',require(path.resolve(__dirname,'app','main.js')))
+  app.use('/newapp',require(path.resolve(__dirname,'newapp.js')))
 
-  app.use('/about',require(path.resolve(__dirname,'route','about','main.js')))
-  
-  app.use('/',require(path.resolve(__dirname,'route','home','main.js')))
-  
   let server=app.listen(port, ()=>{
-    console.log('Listening on port 8080!')
-    okitchen.config.set('port',server.address().port)
+    console.log(`Listening on port ${port}!`)
+    okitchen.config.set('port',port)
   })
 })
 .catch(e=>{return okitchen.logger.error(e)})

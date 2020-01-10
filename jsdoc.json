@@ -4,9 +4,9 @@
     "source": {
             "exclude":[
               "node_modules",
-              "out",
-              "doc",
-              "data",
+              "frontend",
+              "docs",
+              "routes",
               "assets",
               "jobqueue",
               "public",

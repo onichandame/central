@@ -27,3 +27,7 @@ A service must have an opening API available to the outer world. It must be regi
 ## Client
 
 A client is an enduser requiring to access a service.
+
+## Access Control
+
+[accesscontrol](https://www.npmjs.com/package/accesscontrol) is used to implement a hybrid RBAC and ABAC.

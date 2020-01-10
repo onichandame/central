@@ -70,7 +70,7 @@ const dft_user={
   }
 }
 
-dft_session={
+const dft_session={
   name:'TableSession',
   cols:{
     user:{
