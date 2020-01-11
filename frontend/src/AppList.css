@@ -1,7 +1,23 @@
 #applist {
-  border:solid #ff0000;
+  height:200px;
 }
-.subapp {
+.carousel-item {
   background-color: #0CB2FA;
-  margin:0 10%;
+  margin:0;
+}
+.carousel-item > a > img {
+  width:150px;
+  height:150px;
+}
+.carousel-caption {
+  color:#0000ff;
+  position:relative;
+  left:auto;
+  right:auto;
+}
+.carousel-inner {
+  height:100%;
+}
+.carousel-indicators {
+  bottom:-50px;
 }

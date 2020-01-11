@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
   return (
-    <Row id="app">
+    <Row id="app" noGutters={true}>
       <Bar />
       <Register />
     </Row>

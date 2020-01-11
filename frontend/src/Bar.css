@@ -2,11 +2,11 @@
   background-color : ffffff00;
   height:100%;
 }
-#bar > div {
-  padding-top:30%;
+#bar > * {
+  margin-top:20%;
 }
-#bar > div > img {
+#bar > img {
   border-radius: 50%;
   border: 2px solid #0080f0;
-  width:50%;
+  width:180px;
 }

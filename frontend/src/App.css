@@ -4,7 +4,9 @@ body {
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-position:center;
+  color:#ffffff;
 }
 #app {
   height:100%;
+  width:100%;
 }

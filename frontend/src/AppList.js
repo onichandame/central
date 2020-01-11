@@ -38,8 +38,8 @@ class AppList extends React.Component
     if(!Array.isArray(this.state.apps)) return result
     this.state.apps.forEach(app=>{
       result.push(
-        <Carousel.Item className="subapp h-100 text-center">
-          <a href={app.link}><img className="d-block h-100" src={app.icon} alt={app.title}/></a>
+        <Carousel.Item className="h-100 text-center">
+          <a href={app.link}><img src={app.icon}/></a>
           <Carousel.Caption><p>{app.title}</p></Carousel.Caption>
         </Carousel.Item>
       )

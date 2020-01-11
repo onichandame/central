@@ -11,8 +11,8 @@ class Bar extends React.Component
   render()
   {
     return (
-      <Col sm={12} lg={6} id="bar">
-        <Col xs={12} className="text-center"><Image src="https://onichandame.github.io/avatar.jpg" roundedCircle/></Col>
+      <Col sm={12} lg={6} id="bar" className="text-center">
+        <Image src="https://onichandame.github.io/avatar.jpg" roundedCircle/>
         <AppList />
       </Col>
     )
